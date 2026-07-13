@@ -79,6 +79,9 @@ PowerShell executed with an encoded command.
 ---
 
 ## Outcome
+## Detection Screenshot
+
+![Encoded PowerShell Alert](../screenshots/encoded-powershell-alert.png)
 
 The rule successfully detected the encoded PowerShell execution and generated the expected alert.
 
