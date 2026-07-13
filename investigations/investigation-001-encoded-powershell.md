@@ -18,6 +18,15 @@
 Determine whether the execution of an encoded PowerShell command represented malicious activity or legitimate administrative testing.
 
 ---
+## Why This Detection Was Created
+
+PowerShell is a legitimate Windows administration tool, but it is also one of the most commonly abused utilities in cyber attacks.
+
+Threat actors frequently use the `-EncodedCommand` (or `-enc`) argument to execute Base64-encoded PowerShell commands. Encoding the command helps obscure its contents from casual inspection and can make malicious activity harder to identify during routine monitoring.
+
+While administrators may also use encoded commands for automation or scripting, the use of `-EncodedCommand` warrants investigation because it is a common technique observed in malware, ransomware, and post-exploitation frameworks.
+
+This custom detection rule was created to improve visibility into encoded PowerShell execution and provide analysts with an alert that can be investigated in the context of user activity, parent process, command line, and subsequent behavior.
 
 ## Detection
 
