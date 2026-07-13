@@ -31,7 +31,9 @@ The rule successfully generated an alert when the encoded PowerShell command was
 ---
 
 ## Evidence
+## Alert Screenshot
 
+![Encoded PowerShell Alert](../screenshots/encoded-powershell-alert.png)
 ### User
 
 ```
