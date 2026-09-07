@@ -1,21 +1,22 @@
-# SOC Home Lab - Wazuh & Sysmon
+# SOC Home Lab - Wazuh, Sysmon & Splunk
 
 ## Overview
 
-This project demonstrates the design and implementation of a Security Operations Center (SOC) home lab using Wazuh and Sysmon.
+This project demonstrates the design and implementation of a practical Security Operations Center (SOC) home lab using Wazuh, Sysmon, and Splunk.
 
-The lab focuses on endpoint monitoring, threat detection, alert investigation, and custom detection engineering using Windows event logs and Sysmon telemetry.
+The lab focuses on endpoint monitoring, threat detection, alert investigation, threat hunting, and detection engineering using Windows telemetry.
 
 ---
 
 ## Objectives
 
-- Deploy a functional Wazuh SIEM environment.
+- Deploy functional SIEM/SOC tooling.
 - Monitor Windows endpoint activity using Sysmon.
-- Investigate Windows security alerts.
-- Map detections to the MITRE ATT&CK framework.
-- Develop custom Wazuh detection rules.
-- Build practical SOC analyst skills.
+- Investigate Windows security events.
+- Build and validate custom detections.
+- Practice SPL-based threat hunting with Splunk.
+- Map relevant detections to the MITRE ATT&CK framework where appropriate.
+- Develop practical SOC analyst skills.
 
 ---
 
@@ -23,10 +24,10 @@ The lab focuses on endpoint monitoring, threat detection, alert investigation, a
 
 | Component | Technology |
 |-----------|------------|
-| SIEM | Wazuh 4.14.5 |
+| SIEM / SOC tooling | Wazuh 4.14.5, Splunk Enterprise |
 | Endpoint | Windows 11 |
-| Monitoring | Sysmon |
-| Agent | Wazuh Agent |
+| Endpoint monitoring | Sysmon |
+| Agents / forwarders | Wazuh Agent, Splunk Universal Forwarder |
 | Server | Ubuntu Linux |
 | Virtualization | Oracle VirtualBox |
 
@@ -41,6 +42,8 @@ The lab focuses on endpoint monitoring, threat detection, alert investigation, a
 - Detection Engineering
 - Sysmon Monitoring
 - PowerShell Analysis
+- SPL / Splunk Investigation
+- False-Positive Analysis
 - MITRE ATT&CK Mapping
 - Security Operations
 
@@ -48,11 +51,26 @@ The lab focuses on endpoint monitoring, threat detection, alert investigation, a
 
 ## Repository Structure
 
-```
-screenshots/
+```text
+architecture/
 investigations/
+rules/
+screenshots/
+splunk/
 README.md
 ```
+
+### Splunk Mini SOC
+
+The [`splunk/`](splunk/) directory contains the dedicated Splunk Mini SOC project documentation, including:
+
+- architecture and telemetry overview
+- practical SPL queries
+- two validated Splunk detections
+- threat-hunting investigations
+- alert validation methodology
+
+See [`splunk/README.md`](splunk/README.md), [`splunk/SPL-QUERIES.md`](splunk/SPL-QUERIES.md), and [`splunk/DETECTIONS.md`](splunk/DETECTIONS.md).
 
 ---
 
